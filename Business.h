@@ -1,3 +1,8 @@
+/*
+* Koray Kural
+* 150170053
+* 26/04/2020
+*/
 #include <iostream>
 #include <string>
 #include "Courier.h"
@@ -66,7 +71,7 @@ void Business::list_owners()
 {
   for (int i = 0; i < num_of_owners; i++)
   {
-    owners[i].print_owner();
+    owners[i].print();
   }
 }
 
@@ -74,7 +79,7 @@ void Business::list_couriers()
 {
   for (int i = 0; i < couriers.size(); i++)
   {
-    couriers.get(i).print_courier();
+    couriers.get(i).print();
   }
 }
 

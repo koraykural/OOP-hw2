@@ -1,3 +1,8 @@
+/*
+* Koray Kural
+* 150170053
+* 26/04/2020
+*/
 #include <iostream>
 
 #ifndef person
@@ -16,7 +21,7 @@ public:
   Courier();
   Courier(string name, string surname, string vehicle);
   Courier(const Courier &in_courier);
-  void print_courier();
+  void print();
   int get_transport_capacity() const;
   bool operator==(Courier& rhs);
 };
@@ -46,15 +51,15 @@ Courier::Courier(string name, string surname, string in_vehicle):Person(name, su
   }
 }
 
-Courier::Courier(const Courier &in_courier):Person(in_courier.get_name(), in_courier.get_surname())
+Courier::Courier(const Courier &in_courier):Person(in_courier.name, in_courier.surname)
 {
   vehicle = in_courier.vehicle;
   transport_capacity = in_courier.transport_capacity;
 }
 
-void Courier::print_courier()
+void Courier::print()
 {
-  print_person();
+  Person::print();
   cout << vehicle << endl;
 }
 
@@ -65,5 +70,5 @@ int Courier::get_transport_capacity() const
 
 bool Courier::operator==(Courier &rhs)
 {
-  return get_name() == rhs.get_name() && get_surname() == rhs.get_surname();
+  return name == rhs.name && surname == rhs.surname;
 }

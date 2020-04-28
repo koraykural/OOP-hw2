@@ -1,3 +1,8 @@
+/*
+* Koray Kural
+* 150170053
+* 26/04/2020
+*/
 #include <iostream>
 #include "Business.h"
 

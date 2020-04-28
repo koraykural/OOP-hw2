@@ -1,3 +1,8 @@
+/*
+* Koray Kural
+* 150170053
+* 26/04/2020
+*/
 #include <iostream>
 #include <string>
 
@@ -5,12 +10,12 @@ using namespace std;
 
 class Person
 {
-private:
+protected:
   string name;
   string surname;
 public:
   Person(string name, string surname);
-  void print_person();
+  void print();
   string get_name() const;
   string get_surname() const;
   void set_name(string name);
@@ -23,7 +28,7 @@ Person::Person(string in_name, string in_surname)
   surname = in_surname;
 }
 
-void Person::print_person()
+void Person::print()
 {
   cout <<name << " " << surname << " ";
 }

@@ -1,3 +1,8 @@
+/*
+* Koray Kural
+* 150170053
+* 26/04/2020
+*/
 #include <iostream>
 
 #ifndef person
@@ -15,7 +20,7 @@ public:
   Owner();
   Owner(const Owner &in_owner);
   Owner(string name, string surname, float ownership);
-  void print_owner();
+  void print();
   void set_ownership(int percentage);
 };
 
@@ -24,7 +29,7 @@ Owner::Owner():Person("","")
   ownership = 0;
 }
 
-Owner::Owner(const Owner &in_owner):Person(in_owner.get_name(), in_owner.get_surname())
+Owner::Owner(const Owner &in_owner):Person(in_owner.name, in_owner.surname)
 {
   ownership = in_owner.ownership;
 }
@@ -34,9 +39,9 @@ Owner::Owner(string name, string surname, float in_ownership = 0):Person(name, s
   ownership = in_ownership;
 }
 
-void Owner::print_owner()
+void Owner::print()
 {
-  print_person();
+  Person::print();
   cout << ownership << endl;
 }
 
